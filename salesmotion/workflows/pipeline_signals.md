@@ -19,8 +19,8 @@ Review buying signals across my accounts from the last 7 days.
 
 ## Gather
 
-1. get_signal_counts with afterDate="<today's date minus 7 days, as YYYY-MM-DD>" for the distribution.
-2. list_accounts with hasSignalsAfterDate="<today's date minus 7 days, as YYYY-MM-DD>", sorted by score, up to 20.
+1. get_signal_counts with afterDate="<today's date minus 8 days, as YYYY-MM-DD>" for the distribution.
+2. list_accounts with hasSignalsAfterDate="<today's date minus 8 days, as YYYY-MM-DD>", sorted by score, up to 20.
 3. get_signals for the top accounts to see what actually happened.
 
 Signal types you can filter on: relevant-news, press-release, hiring-alert, earnings-call,

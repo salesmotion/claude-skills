@@ -19,8 +19,8 @@ Assess my territory and tell me where to focus.
 ## Gather
 
 1. list_accounts sorted by score, up to 50, to see the shape of the book.
-2. list_accounts with hasSignalsAfterDate="<today's date minus 90 days, as YYYY-MM-DD>" to see which accounts show activity.
-3. get_signal_counts with afterDate="<today's date minus 90 days, as YYYY-MM-DD>" for the overall picture.
+2. list_accounts with hasSignalsAfterDate="<today's date minus 91 days, as YYYY-MM-DD>" to see which accounts show activity.
+3. get_signal_counts with afterDate="<today's date minus 91 days, as YYYY-MM-DD>" for the overall picture.
 4. get_signals on the highest-scoring active accounts to understand what is driving the activity.
 
 Evidence rules:

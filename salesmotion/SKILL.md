@@ -1,6 +1,6 @@
 ---
 name: salesmotion
-description: Run Salesmotion sales workflows from one command — account research, one-page briefs, strategic account plans, value pyramids, MEDDIC qualification, stakeholder maps, meeting prep, signal-anchored outreach, pipeline and territory reviews, earnings and hiring deep dives. Use whenever the user names a company or contact and wants research, a plan, prep, or outreach, or types /salesmotion.
+description: "Type /salesmotion followed by what you want and a company — e.g. 'account plan for Honeywell', 'brief me on Bayer', 'who decides at Hitachi', 'email the CFO at Bayer about earnings'. Twelve sales workflows: briefs, research, account plans, value pyramids, MEDDIC, stakeholder maps, meeting prep, outreach, pipeline and territory reviews, earnings and hiring analysis. Type /salesmotion alone to see the menu."
 ---
 
 # Salesmotion
@@ -12,6 +12,31 @@ be available in this chat — it provides tools such as `account_insights`,
 `get_company_earnings_calls`, `get_company_filings`, `list_accounts`,
 `get_signal`, and `get_signal_counts`. If none of those tools are available,
 say so in one sentence and stop; do not answer from general knowledge.
+
+## 0. No request yet? Show the menu
+
+If the user typed `/salesmotion` with nothing after it, or asks what you can
+do ("help", "options", "what can I do", "menu"), do **not** call any tools.
+Reply with exactly this, then wait:
+
+> **Salesmotion — tell me what you want and which company.**
+>
+> - **Brief** — `/salesmotion Honeywell` · one page before a call
+> - **Research** — `/salesmotion research Bayer in depth` · the full read
+> - **Account plan** — `/salesmotion account plan for Hitachi` · stakeholders, SWOT, 90-day actions
+> - **Value pyramid** — `/salesmotion value pyramid Honeywell` · goals → strategy → obstacles → value paths
+> - **Qualify** — `/salesmotion qualify the Bayer deal with MEDDIC` · scorecard and gaps
+> - **Stakeholders** — `/salesmotion who decides at Panasonic` · buying committee
+> - **Meeting prep** — `/salesmotion meeting with Jane Doe at Honeywell`
+> - **Outreach** — `/salesmotion email the CFO at Bayer about their earnings call`
+> - **Pipeline** — `/salesmotion what's new across my accounts this week`
+> - **Territory** — `/salesmotion review my territory`
+> - **Earnings** — `/salesmotion what has Honeywell's CEO said about margins lately`
+> - **Hiring** — `/salesmotion what is Hitachi hiring for`
+>
+> Just a company name gets you the brief. Which company?
+
+If the user then replies with only a company name, run `account_brief`.
 
 ## 1. Pick the workflow
 
