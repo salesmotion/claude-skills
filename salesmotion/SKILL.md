@@ -102,8 +102,15 @@ Shared rules that apply to every workflow:
   `account_insights` with the `accountId` of the best match rather than asking
   the user, unless the candidates are genuinely different companies.
 
+- **Contacts are tracked people, not the org chart.** Salesmotion returns
+  the contacts that match the organisation's target personas. If a role that
+  matters is missing, look for the person in `get_signals` and
+  `get_company_news`, cite that source, and mark them *"not yet a tracked
+  contact"* — never report the role as vacant because the search was empty.
+
 ## 4. Deliver
 
-Produce the output structure the workflow specifies, nothing more. Lead with
-what is decision-useful. Keep the tone of a knowledgeable peer — direct,
-specific, no filler, no flattery about the company.
+Produce the sections the workflow specifies, nothing more, laid out by the
+workflow's **Presentation rules**: bottom line first, tables for anything
+with shared attributes, short paragraphs. Keep the tone of a knowledgeable
+peer — direct, specific, no filler, no flattery about the company.

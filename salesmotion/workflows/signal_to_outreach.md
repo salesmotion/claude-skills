@@ -55,3 +55,12 @@ Rules that decide whether this gets a reply:
 2. The draft, ready to send.
 3. One alternative opening line taking a different angle.
 4. The follow-up you would send if there is no reply, and how long you would wait.
+
+Presentation rules (for any output longer than a short message; skip them for an email or DM draft):
+- Open with a three-line bottom line: the situation, the opportunity, the next move. No preamble before it.
+- Use a table wherever items share attributes: stakeholders (name, title, role in the deal, evidence), SWOT (a 2x2),
+  objectives (metric, target, date), actions (owner, action, date), signals (date, type, what it means).
+- Keep prose to short paragraphs of at most three sentences. One idea per bullet, no nested bullets.
+- Put the source and date in the same row or line as the claim, not in a block at the end.
+- Bold only the few phrases a reader skimming for 20 seconds must see. No emoji, no decorative dividers.
+- If you can produce a formatted document or artifact, deliver the full output there and keep the chat reply to the bottom line.
