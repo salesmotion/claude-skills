@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "salesmotion": {
+      "type": "http",
+      "url": "https://mcp.salesmotion.io"
+    }
+  }
+}

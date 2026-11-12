@@ -1,0 +1,29 @@
+{
+  "name": "salesmotion",
+  "displayName": "Salesmotion",
+  "version": "4.4.3",
+  "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and twelve guided B2B sales workflows.",
+  "author": {
+    "name": "Salesmotion",
+    "email": "hi@salesmotion.io",
+    "url": "https://salesmotion.io"
+  },
+  "homepage": "https://salesmotion.io",
+  "repository": "https://github.com/salesmotion/claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "account-research",
+    "account-planning",
+    "buying-signals",
+    "meeting-prep",
+    "meddic",
+    "outreach",
+    "b2b"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://salesmotion.io/help/getting-started-with-salesmotion-in-claude",
+  "supportUrl": "https://salesmotion.io/help",
+  "privacyPolicyUrl": "https://salesmotion.io/privacy-policy",
+  "termsOfServiceUrl": "https://salesmotion.io/terms-of-service"
+}
