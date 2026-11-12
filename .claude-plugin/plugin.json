@@ -1,7 +1,7 @@
 {
   "name": "salesmotion",
   "displayName": "Salesmotion",
-  "version": "4.4.3",
+  "version": "4.5.0",
   "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and twelve guided B2B sales workflows.",
   "author": {
     "name": "Salesmotion",
