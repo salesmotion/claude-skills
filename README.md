@@ -41,7 +41,7 @@ Salesmotion for Claude works with Salesmotion workspaces that have API access sw
 
 **Claude Code**: the plugin adds the connector for you. Run `/mcp`, select **salesmotion**, and complete the same Salesmotion sign-in in your browser.
 
-You don't need an API key. Claude signs in with your own Salesmotion account and sees only what your account can see.
+You don't need an API key: Claude connects with your normal Salesmotion sign-in.
 
 ## Use
 
