@@ -5,7 +5,7 @@ Account research, account plans, meeting prep, MEDDIC qualification and signal-a
 This plugin bundles two things:
 
 - **The Salesmotion connector** (remote MCP server at `https://mcp.salesmotion.io`). It gives Claude Salesmotion's tools: account insights, signals, contacts, company news, jobs, earnings calls and filings.
-- **The Salesmotion skill**: twelve guided B2B sales workflows that tell Claude which tools to call, in what order, and what the output must contain. Every claim is tied to a dated source from Salesmotion; nothing is invented.
+- **The Salesmotion skill**: thirteen guided B2B sales workflows that tell Claude which tools to call, in what order, and what the output must contain. Every claim is tied to a dated source from Salesmotion; nothing is invented.
 
 Ask for an account plan for Honeywell and you get the plan.
 
@@ -54,11 +54,12 @@ Who decides at Hitachi                          → stakeholder map
 Prep my meeting with Jane Doe at Honeywell      → meeting prep
 Email the CFO at Bayer about their earnings     → signal-anchored draft
 What's new across my accounts this week         → pipeline review
+Which trials start soon across my accounts      → trial watch (Life Sciences pack)
 ```
 
 Claude picks the workflow from what you ask. In claude.ai you can also type `/salesmotion` followed by your request, or `/salesmotion` alone for the menu. In Claude Code the skill is `/salesmotion:salesmotion`. A bare company name gives you the brief; a person plus a company gives you meeting prep.
 
-The twelve workflows: account brief, account research, account plan, value pyramid, MEDDIC qualification, stakeholder map, meeting prep, signal to outreach, pipeline signals, territory review, earnings deep dive and hiring signals analysis.
+The thirteen workflows: account brief, account research, account plan, value pyramid, MEDDIC qualification, stakeholder map, meeting prep, signal to outreach, pipeline signals, territory review, earnings deep dive, hiring signals analysis and, for organizations with the Life Sciences pack, trial watch.
 
 ## What's inside
 
@@ -68,9 +69,9 @@ The twelve workflows: account brief, account research, account plan, value pyram
 | `.claude-plugin/marketplace.json` | Lets Claude Code add this repository as a plugin marketplace |
 | `.mcp.json` | The Salesmotion connector (`https://mcp.salesmotion.io`) |
 | `skills/salesmotion/SKILL.md` | The router: picks the workflow from your request and carries the shared rules |
-| `skills/salesmotion/workflows/*.md` | The twelve workflows |
+| `skills/salesmotion/workflows/*.md` | The thirteen workflows |
 
-The same twelve workflows ship inside the Salesmotion MCP server as prompts and as the `run_skill` tool, so they also work by name in any MCP client.
+The same thirteen workflows ship inside the Salesmotion MCP server as prompts and as the `run_skill` tool, so they also work by name in any MCP client.
 
 ## Rules every workflow follows
 

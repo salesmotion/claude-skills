@@ -12,3 +12,4 @@
 | `territory_review` | Step back and assess a whole book of accounts: where the potential is, which accounts are being under-worked, and where to spend time next quarter. |
 | `earnings_deep_dive` | Mine a public company's earnings calls and filings for strategy, priorities, and pressure in management's own words — the most credible material for executive conversations. |
 | `hiring_signals_analysis` | Read a company's job postings as strategy: what they are building, which teams are funded, what tools they use, and what that means for timing. |
+| `trial_watch` | Life Sciences: turn the trials your accounts start or complete in the next 180 days into a prioritized outreach list. |

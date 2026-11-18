@@ -1,6 +1,6 @@
 {
   "name": "salesmotion",
-  "description": "Salesmotion's plugin for Claude: the Salesmotion connector plus twelve B2B sales workflows.",
+  "description": "Salesmotion's plugin for Claude: the Salesmotion connector plus thirteen B2B sales workflows.",
   "owner": {
     "name": "Salesmotion",
     "email": "hi@salesmotion.io",
@@ -10,7 +10,7 @@
     {
       "name": "salesmotion",
       "source": "./",
-      "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and twelve guided B2B sales workflows."
+      "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and thirteen guided B2B sales workflows, including Trial Watch for Life Sciences teams."
     }
   ]
 }

@@ -22,20 +22,21 @@ Draft an email to the best contact at <the company the user named>, anchored to 
 
 1. account_insights with query="<the company the user named>" — the value section gives you the three whys and
    value hypotheses, which are the raw material for a relevant message.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
   Fall back to get_company with input=<domain> and build from the company sub-resource tools
   (get_company_news, get_company_jobs, get_company_earnings_calls, get_company_filings).
   Say clearly which path you used, because the depth of the answer depends on it.
-2. get_signals — recent signals. Pick the one with the clearest implication for a buyer, not simply the
+2. get_signals with accountId=<Account ID from step 1> — recent signals. Pick the one with the clearest implication for a buyer, not simply the
    newest. A funding round or a leadership change usually beats a routine press mention.
 3. get_signal on the chosen signal for the full content, so you reference specifics rather than a headline.
 4. get_contacts — pick the person whose role most directly owns the problem this signal implies.
 
-Signal types you can filter on: relevant-news, press-release, hiring-alert, earnings-call,
-m-and-a-alert, funding-alert, sec-10q, sec-def-14a, clinical-trial, document, and relevant-media
-(relevant-media is podcast and video mentions).
+Signal types you can filter on (one or several): relevant-news, press-release, hiring-alert, hiring-alert-closed,
+earnings-call, m-and-a-alert, funding-alert, sec-10k, sec-10q, sec-def-14a, clinical-trial, document, and relevant-media
+(relevant-media is podcast and video mentions; hiring-alert-closed is a role that was filled or withdrawn).
 
 ## Write
 

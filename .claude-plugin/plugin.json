@@ -1,8 +1,8 @@
 {
   "name": "salesmotion",
   "displayName": "Salesmotion",
-  "version": "4.5.0",
-  "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and twelve guided B2B sales workflows.",
+  "version": "4.7.1",
+  "description": "Account research, account plans, meeting prep, MEDDIC qualification and signal-based outreach from Salesmotion's live account intelligence. Bundles the Salesmotion connector and thirteen guided B2B sales workflows, including Trial Watch for Life Sciences teams.",
   "author": {
     "name": "Salesmotion",
     "email": "hi@salesmotion.io",

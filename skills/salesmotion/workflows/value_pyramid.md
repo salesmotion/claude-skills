@@ -24,6 +24,7 @@ top to bottom: company goals, business strategy, challenges and obstacles, and v
 1. account_insights with query="<the company the user named>", sections="value,research,summary".
    Salesmotion generates a value pyramid directly — read it from the value section and use it as your base.
    The same section carries the three whys (why change, why now, why you) and value hypotheses.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
@@ -33,7 +34,7 @@ If account_insights returns not_found or multiple_matches:
 2. If public: get_company_earnings_calls — management states goals and strategy in their own words on
    these calls. This is the strongest possible evidence for the top two layers.
 3. get_company_filings — 10-K risk factors map directly to the challenges layer.
-4. get_signals — recent events that create urgency around any obstacle.
+4. get_signals with accountId=<Account ID from step 1> — recent events that create urgency around any obstacle.
 
 Evidence rules:
 - Attribute every material claim to what produced it: a signal, an earnings call, a filing, a job posting, or a news article. Include dates.

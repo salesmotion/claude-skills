@@ -21,11 +21,11 @@ Review buying signals across my accounts from the last 7 days.
 
 1. get_signal_counts with afterDate="<today's date minus 7 days, as YYYY-MM-DD>" for the distribution.
 2. list_accounts with hasSignalsAfterDate="<today's date minus 7 days, as YYYY-MM-DD>", sorted by score, up to 20.
-3. get_signals for the top accounts to see what actually happened.
+3. get_signals with accountId set to the top accounts' IDs (several at once) to see what actually happened; each row names its account.
 
-Signal types you can filter on: relevant-news, press-release, hiring-alert, earnings-call,
-m-and-a-alert, funding-alert, sec-10q, sec-def-14a, clinical-trial, document, and relevant-media
-(relevant-media is podcast and video mentions).
+Signal types you can filter on (one or several): relevant-news, press-release, hiring-alert, hiring-alert-closed,
+earnings-call, m-and-a-alert, funding-alert, sec-10k, sec-10q, sec-def-14a, clinical-trial, document, and relevant-media
+(relevant-media is podcast and video mentions; hiring-alert-closed is a role that was filled or withdrawn).
 
 ## Deliver
 

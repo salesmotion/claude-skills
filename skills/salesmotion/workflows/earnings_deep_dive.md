@@ -23,7 +23,7 @@ Analyse the last 4 quarters of earnings commentary for <the company the user nam
 2. get_company_earnings_calls with perPage=4. Read the AI analysis for each call.
    For the most recent call, consider includeTranscript=true with perPage=1 to quote precisely.
 3. get_company_filings — 10-K and 10-Q risk factors, and any 8-K material events.
-4. get_signals filtered to earnings-call and sec-10q for how Salesmotion scored these events.
+4. If the company is a tracked account, get_signals with its accountId and signalType earnings-call, sec-10k and sec-10q for how Salesmotion scored these events.
 
 Evidence rules:
 - Attribute every material claim to what produced it: a signal, an earnings call, a filing, a job posting, or a news article. Include dates.

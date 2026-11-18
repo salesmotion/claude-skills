@@ -19,14 +19,15 @@ Qualify the opportunity at <the company the user named> using MEDDIC.
 ## Gather
 
 1. account_insights with query="<the company the user named>" — full sections.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
   Fall back to get_company with input=<domain> and build from the company sub-resource tools
   (get_company_news, get_company_jobs, get_company_earnings_calls, get_company_filings).
   Say clearly which path you used, because the depth of the answer depends on it.
-2. get_contacts — up to 25, with titles and role changes, to identify buyer and champion candidates.
-3. get_signals — recent events that create or intensify pain.
+2. get_contacts with accountId=<Account ID from step 1>, perPage=25, with titles and role changes, to identify buyer and champion candidates.
+3. get_signals with the same accountId — recent events that create or intensify pain.
 4. If public: get_company_earnings_calls and get_company_filings for stated metrics and risk factors.
 
 Evidence rules:

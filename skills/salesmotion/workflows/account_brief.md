@@ -19,14 +19,15 @@ Write a one-page account brief on <the company the user named>.
 ## Gather
 
 1. account_insights with query="<the company the user named>" — pull the summary and value sections.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
   Fall back to get_company with input=<domain> and build from the company sub-resource tools
   (get_company_news, get_company_jobs, get_company_earnings_calls, get_company_filings).
   Say clearly which path you used, because the depth of the answer depends on it.
-2. get_signals — the 5 most recent signals only. Recency matters more than volume here.
-3. get_contacts — top 5 by score.
+2. get_signals with accountId=<Account ID from step 1>, perPage=5. Recency matters more than volume here.
+3. get_contacts with the same accountId, perPage=5 (top by score).
 
 Evidence rules:
 - Attribute every material claim to what produced it: a signal, an earnings call, a filing, a job posting, or a news article. Include dates.

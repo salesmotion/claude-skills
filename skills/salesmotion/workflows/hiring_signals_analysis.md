@@ -23,10 +23,12 @@ vaguely in a press release and then post twelve roles that say exactly what it i
 
 1. get_company with input="<the company the user named>" to resolve the company.
 2. get_company_jobs with perPage=50 for the full picture of open roles.
-3. get_company_jobs again with includeDescription=true on the most relevant roles — the description text
-   is where tech stack, tooling, and priorities are actually named.
-4. get_signals filtered to hiring-alert for how Salesmotion has scored this activity.
-5. account_insights with query="<the company the user named>" to connect hiring back to stated strategy.
+3. get_company_jobs again with includeDescription=true and perPage=10 — descriptions come a page at a time
+   (there is no single-posting fetch), and they are where tech stack, tooling, and priorities are actually named.
+   Page further only if the most relevant roles are not in the first pages.
+4. account_insights with query="<the company the user named>" to connect hiring back to stated strategy.
+5. get_signals with accountId=<Account ID from step 4> and signalType hiring-alert and hiring-alert-closed for how Salesmotion has scored this activity.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.

@@ -20,14 +20,15 @@ Research <the company the user named> using Salesmotion and produce an account b
 
 1. account_insights with query="<the company the user named>" (use the domain if it looks like one).
    This returns profile, summary, research, SWOT, and value sections in one call.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
   Fall back to get_company with input=<domain> and build from the company sub-resource tools
   (get_company_news, get_company_jobs, get_company_earnings_calls, get_company_filings).
   Say clearly which path you used, because the depth of the answer depends on it.
-2. get_signals for the account — the 10 most recent. Note what changed and when.
-3. get_contacts for the account — top 10 by score. Flag anyone who recently changed roles.
+2. get_signals with accountId=<Account ID from step 1> — the 10 most recent. Note what changed and when.
+3. get_contacts with the same accountId — top 10 by score. Flag anyone who recently changed roles.
 4. If the company is public and you need strategy in management's own words,
    call get_company_earnings_calls for the most recent call's AI analysis.
 

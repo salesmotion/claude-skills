@@ -20,6 +20,7 @@ Prepare me for a meeting with <the person the user named> at <the company the us
 ## Gather
 
 1. account_insights with query="<the company the user named>" for company context.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
@@ -28,7 +29,7 @@ If account_insights returns not_found or multiple_matches:
   Say clearly which path you used, because the depth of the answer depends on it.
 2. search_contacts for "<the person the user named>", then get_contact on the match for their full profile,
    person insights, talking points, tenure, and any recent role change.
-3. get_signals — the most recent 10, filtered mentally to what someone in their role would care about.
+3. get_signals with accountId=<Account ID from step 1> — the most recent 10, filtered mentally to what someone in their role would care about.
    A CFO and a VP Engineering care about different things at the same company.
 4. If public and this is a senior commercial conversation: get_company_earnings_calls for the latest
    call, so you can reference what their leadership has publicly committed to.

@@ -19,7 +19,8 @@ Map the buying committee at <the company the user named>.
 ## Gather
 
 1. get_contacts for the account — request up to 50 so you see the whole org, not just the top scores.
-   Resolve the account first with account_insights query="<the company the user named>" if you need the accountId.
+   Resolve the account first with account_insights query="<the company the user named>", sections="profile": its first line is the Account ID.
+account_insights prints the account's Account ID on its first line; pass it as accountId to get_signals and get_contacts.
 If account_insights returns not_found or multiple_matches:
 - multiple_matches: re-call account_insights with the accountId of the best match.
 - not_found: the company may not be in the account list, or this may be an API-only organization.
@@ -29,7 +30,7 @@ If account_insights returns not_found or multiple_matches:
 2. get_contact on the 5-8 most important people for full profiles, person insights, and talking points.
 3. get_contacts with changeType filters (newJoiner, promotion, internalChange) — people new in role are
    disproportionately open to new vendors and are often the best entry point.
-4. get_signals — leadership changes and reorganizations reshape who matters.
+4. get_signals with the same accountId — leadership changes and reorganizations reshape who matters.
 
 Evidence rules:
 - Attribute every material claim to what produced it: a signal, an earnings call, a filing, a job posting, or a news article. Include dates.

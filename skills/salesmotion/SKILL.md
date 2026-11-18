@@ -1,6 +1,6 @@
 ---
 name: salesmotion
-description: "Type /salesmotion followed by what you want and a company — e.g. 'account plan for Honeywell', 'brief me on Bayer', 'who decides at Hitachi', 'email the CFO at Bayer about earnings'. Twelve sales workflows: briefs, research, account plans, value pyramids, MEDDIC, stakeholder maps, meeting prep, outreach, pipeline and territory reviews, earnings and hiring analysis. Type /salesmotion alone to see the menu."
+description: "Type /salesmotion followed by what you want and a company — e.g. 'account plan for Honeywell', 'brief me on Bayer', 'who decides at Hitachi', 'email the CFO at Bayer about earnings'. Thirteen sales workflows: briefs, research, account plans, value pyramids, MEDDIC, stakeholder maps, meeting prep, outreach, pipeline and territory reviews, earnings and hiring analysis, and a clinical trial watch (Life Sciences pack). Type /salesmotion alone to see the menu."
 ---
 
 # Salesmotion
@@ -33,6 +33,7 @@ Reply with exactly this, then wait:
 > - **Territory** — `/salesmotion review my territory`
 > - **Earnings** — `/salesmotion what has Honeywell's CEO said about margins lately`
 > - **Hiring** — `/salesmotion what is Hitachi hiring for`
+> - **Trial watch** — `/salesmotion which trials start or finish soon across my accounts` · Life Sciences pack
 >
 > Just a company name gets you the brief. Which company?
 
@@ -57,6 +58,7 @@ on intent, not exact wording.
 | `territory_review` | to prioritise a whole book of accounts | territory, my accounts, where to focus, tiering |
 | `earnings_deep_dive` | management's own words over several quarters | earnings, what did the CEO say, filings, guidance, 10-K |
 | `hiring_signals_analysis` | what job postings reveal | hiring, job postings, who are they hiring, headcount |
+| `trial_watch` | trials starting or completing soon across their accounts (Life Sciences pack) | clinical trials, trial radar, trials starting soon, trial readouts |
 
 Rules:
 - A bare company name (`/salesmotion Honeywell`) means `account_brief`. After
@@ -71,7 +73,7 @@ Rules:
 
 ## 2. Extract the inputs
 
-Every workflow needs a company (name or domain). Some also take a person, and
+Every workflow except `pipeline_signals`, `territory_review` and `trial_watch` needs a company (name or domain). Some also take a person, and
 most accept optional modifiers — depth, channel, look-back days, deal
 context, what you sell, and so on. Pull these from the user's message only;
 never invent them. Each workflow file lists its inputs under **Inputs**.

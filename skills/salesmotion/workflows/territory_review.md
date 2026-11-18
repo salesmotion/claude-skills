@@ -21,7 +21,7 @@ Assess my territory and tell me where to focus.
 1. list_accounts sorted by score, up to 50, to see the shape of the book.
 2. list_accounts with hasSignalsAfterDate="<today's date minus 90 days, as YYYY-MM-DD>" to see which accounts show activity.
 3. get_signal_counts with afterDate="<today's date minus 90 days, as YYYY-MM-DD>" for the overall picture.
-4. get_signals on the highest-scoring active accounts to understand what is driving the activity.
+4. get_signals with accountId set to the highest-scoring active accounts (several IDs at once) to understand what is driving the activity.
 
 Evidence rules:
 - Attribute every material claim to what produced it: a signal, an earnings call, a filing, a job posting, or a news article. Include dates.
